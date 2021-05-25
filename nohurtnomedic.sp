@@ -2,7 +2,7 @@
 #include <sdktools>
 #include <tf2_stocks>
 
-#define PLUGIN_NAME "No hurt no medic modified to exclude vip"
+#define PLUGIN_NAME "No hurt no medic modified to exclude vip, heavies and spies"
 #define PLUGIN_AUTHOR "Psychonic, idea Snelvuur"
 #define PLUGIN_DESCRIPTION "If your not below 100% health, you cannot call for medic"
 #define PLUGIN_VERSION "1.0"
