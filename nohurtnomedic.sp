@@ -1,5 +1,6 @@
 #include <sourcemod>
 #include <sdktools>
+#include <tf2_stocks>
 
 #define PLUGIN_NAME "No hurt no medic modified to exclude vip"
 #define PLUGIN_AUTHOR "Psychonic, idea Snelvuur"
@@ -42,7 +43,7 @@ public OnPluginStart()
 
 public Action:voicemenu( client, const String:szCommand[], argc )
 {
-        if( client == 0 || !IsClientInGame( client ) || GetUserFlagBits(client) & ADMFLAG_CUSTOM1)
+        if( client == 0 || !IsClientInGame( client ) || GetUserFlagBits(client) & ADMFLAG_CUSTOM1 || TF2_GetPlayerClass(client) && TFClass_Heavy || TF2_GetPlayerClass(client) && TFClass_Spy )
                 return Plugin_Continue;
 
         new String:szBuffer[16];
